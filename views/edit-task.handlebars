@@ -1,0 +1,19 @@
+<div class="form-container">
+  <h2>Edit Task</h2>
+
+  {{#if error}}
+    <p class="error">{{error}}</p>
+  {{/if}}
+
+  <form action="/tasks/{{task.id}}?_method=PUT" method="POST">
+    <label for="title">Task Title</label>
+    <input type="text" name="title" id="title" value="{{task.title}}" required />
+
+    <button type="submit">Update Task</button>
+  </form>
+
+  <a href="/projects/{{task.ProjectId}}" class="back-link">← Back to Project</a>
+</div>
+
+
+

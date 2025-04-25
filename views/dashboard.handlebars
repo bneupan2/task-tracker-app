@@ -1,0 +1,45 @@
+<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+  
+  <div style="flex: 1; text-align: left;">
+    <button onclick="window.location.href='/projects/new'" class="btn btn-create">+ Create Project</button>
+  </div>
+
+  
+  <div style="flex: 1; text-align: center;">
+    <h2 style="margin: 0;">Your Project Dashboard</h2>
+  </div>
+
+  
+  <div style="flex: 1; text-align: right;">
+    <a href="/logout" class="btn btn-logout">🚪 Logout</a>
+  </div>
+</div>
+
+{{#if message}}
+  <div class="message-success">{{message}}</div>
+{{/if}}
+
+<div class="projects-container">
+  {{#if projects.length}}
+    {{#each projects}}
+      <div class="project-card">
+        <a href="/projects/{{this.id}}" class="project-title">{{this.title}}</a>
+        <p><strong>📅 Due:</strong> {{this.dueDate}}</p>
+        <p><strong>📝 Description:</strong> {{this.description}}</p>
+
+        <div class="project-actions">
+          <a href="/projects/{{this.id}}/edit" class="btn btn-edit">✏️ Edit</a>
+          <form action="/projects/{{this.id}}?_method=DELETE" method="POST" style="display:inline;">
+            <button type="submit" class="btn btn-delete">🗑️ Delete</button>
+          </form>
+        </div>
+      </div>
+    {{/each}}
+  {{else}}
+    <p style="margin-top: 50px; text-align: center; font-size: 16px; color: #666;">
+      🚀 You don’t have any projects yet. Click “+ Create Project” to get started!
+    </p>
+  {{/if}}
+</div>
+
+

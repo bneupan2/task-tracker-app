@@ -1,0 +1,45 @@
+<div class="form-container">
+  <h2>Create a New Project</h2>
+
+  <form action="/projects" method="POST">
+    <label for="title">Project Title</label>
+    <input type="text" name="title" id="title" placeholder="Project Title" required />
+
+    <label for="dueDate">Due Date</label>
+    <input type="date" name="dueDate" id="dueDate" required />
+
+    <label for="description">Description</label>
+    <textarea name="description" id="description" rows="4" placeholder="What’s this project about?" required></textarea>
+
+    <h3 style="margin-top: 25px;">Tasks</h3>
+    <div id="taskInputs">
+      <input type="text" name="tasks[]" placeholder="Task 1 Title" />
+    </div>
+
+    <button type="button" class="btn add" onclick="addTask()" style="margin-top: 10px;">➕ Add Another Task</button>
+
+    <button type="submit" class="btn save">💾 Save Project</button>
+  </form>
+
+  <a href="/dashboard" class="back-link">← Back to Dashboard</a>
+</div>
+
+<script>
+  function addTask() {
+    const container = document.getElementById('taskInputs');
+    const count = container.querySelectorAll('input').length + 1;
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.name = 'tasks[]';
+    input.placeholder = `Task ${count} Title`;
+    input.style.marginTop = '8px';
+    input.style.width = '100%';
+    input.style.padding = '10px';
+    input.style.border = '1px solid #ccc';
+    input.style.borderRadius = '6px';
+
+    container.appendChild(input);
+  }
+</script>
+

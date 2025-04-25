@@ -1,0 +1,404 @@
+body.homepage {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom right, #e6f0ff, #ffffff);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage-container {
+  text-align: center;
+}
+
+.welcome-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+.welcome-box h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.welcome-box h1 span {
+  color: #007bff;
+}
+
+.welcome-box p {
+  margin-bottom: 25px;
+  color: #555;
+}
+
+.auth-buttons .btn {
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.auth-buttons .btn:hover {
+  background: #0056b3;
+}
+
+
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: green; /* ✅ prettier checkbox in modern browsers */
+    cursor: pointer;
+  }
+
+  .auth-page {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom right, #eef3ff, #ffffff);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .auth-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+  }
+  
+  .auth-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .auth-container form input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+  }
+  
+  .auth-container form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .auth-container form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .auth-link {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .auth-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .auth-link a:hover {
+    text-decoration: underline;
+  }
+  
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
+  
+  .success-message {
+    color: green;
+    margin-bottom: 10px;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f9fafb;
+    padding: 20px 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  }
+  
+  .dashboard-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
+    padding: 30px 40px;
+  }
+  
+  .project-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-title {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #4f46e5;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  
+  .project-actions {
+    margin-top: 15px;
+  }
+  
+  .btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 8px;
+  }
+  
+  .btn-edit {
+    background-color: #facc15;
+    color: black;
+  }
+  
+  .btn-delete {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .btn-create {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  .btn-logout {
+    background-color: #f87171;
+    color: white;
+  }
+  
+  .message-success {
+    background: #dcfce7;
+    color: #166534;
+    margin: 20px auto;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    width: 60%;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .form-container h2 {
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+  
+  button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2563eb;
+  }
+  
+  .back-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #1d4ed8;
+    text-decoration: none;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  .error {
+    color: red;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+  .project-container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .progress-bar {
+    background: #e5e7eb;
+    height: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: green;
+    color: white;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+  }
+  
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-list li {
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-title {
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  
+  .task-title.done {
+    text-decoration: line-through;
+    color: gray;
+  }
+  
+  .task-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .task-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .task-form input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%; /* Force full width */
+    box-sizing: border-box; /* Prevent overflow */
+  }
+  
+  .btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .btn.edit {
+    background-color: #facc15;
+  }
+  
+  .btn.delete {
+    background-color: #ef4444;
+    color: white;
+  }
+  
+  .btn.add {
+    background-color: #2563eb;
+    color: white;
+  }
+  
+  .back-link {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: 500;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  

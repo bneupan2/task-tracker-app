@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up | Task Tracker</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+
+  <div class="auth-container">
+    <h2>Create Your Account</h2>
+
+    {{#if error}}
+      <p class="error-message">{{error}}</p>
+    {{/if}}
+
+    <form action="/signup" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="password" name="password" placeholder="Password (min 8 characters)" required>
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <p class="auth-link">Already have an account? <a href="/login">Login here</a></p>
+  </div>
+
+</body>
+</html>

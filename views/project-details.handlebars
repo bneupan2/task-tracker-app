@@ -1,0 +1,45 @@
+<div class="project-container">
+  <h2>{{project.title}}</h2>
+  <p><strong>Due Date:</strong> {{project.dueDate}}</p>
+  <p><strong>Description:</strong> {{project.description}}</p>
+
+  <h3>Tasks</h3>
+  <div class="progress-bar">
+    <div class="progress-fill" style="width: {{progress}}%;">
+      {{progress}}%
+    </div>
+  </div>
+
+  {{#if project.Tasks.length}}
+    <ul class="task-list">
+      {{#each project.Tasks}}
+        <li>
+          <form action="/tasks/{{this.id}}/toggle" method="POST" style="display:inline;">
+            <input type="checkbox" {{#if this.isDone}}checked{{/if}} onchange="this.form.submit()" />
+          </form>
+          <span class="task-title {{#if this.isDone}}done{{/if}}">
+            {{this.title}}
+          </span>
+          <div class="task-actions">
+            <a href="/tasks/{{this.id}}/edit" class="btn edit">✏️ Edit</a>
+            <form action="/tasks/{{this.id}}?_method=DELETE" method="POST" style="display:inline;">
+              <button class="btn delete" type="submit">🗑️ Delete</button>
+            </form>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p class="empty-text">No tasks added yet.</p>
+  {{/if}}
+
+  <h4>Add a New Task</h4>
+  <form action="/projects/{{project.id}}/tasks" method="POST" class="task-form">
+  <input type="text" name="title" placeholder="Enter task title..." required />
+  <button type="submit" class="btn add">➕ Add Task</button>
+  </form>
+
+
+  <a class="back-link" href="/dashboard">← Back to Dashboard</a>
+</div>
+

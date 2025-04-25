@@ -1,0 +1,30 @@
+<div class="form-container">
+  <h2 style="margin-bottom: 20px;">✏️ Edit Project</h2>
+
+  {{#if error}}
+    <p class="error" style="color: red; font-weight: bold; margin-bottom: 15px;">{{error}}</p>
+  {{/if}}
+
+  <form action="/projects/{{project.id}}?_method=PUT" method="POST" class="project-form">
+    <div class="form-group">
+      <label for="title">Project Title</label>
+      <input type="text" name="title" id="title" value="{{project.title}}" required />
+    </div>
+
+    <div class="form-group">
+      <label for="dueDate">Due Date</label>
+      <input type="date" name="dueDate" id="dueDate" value="{{project.dueDate}}" required />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea name="description" id="description" rows="4" required>{{project.description}}</textarea>
+    </div>
+
+    <button type="submit" class="btn"> Update Project</button>
+  </form>
+
+  <div style="margin-top: 20px;">
+    <a href="/dashboard" class="back-link">← Back to Dashboard</a>
+  </div>
+</div>
